@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+   
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen p-6">
+
+    <div>
+        <h1>My Job Application</h1>
+        <button onclick="logout()">logout</button>
+    </div>
+    <!-- add jobs content -->
+<div>
+    <input id="company" placeholder="Company"  class="border p-2 rounded">
+    <input id="role" placeholder="Role"  class="border p-2 rounded">
+    <input id="status" placeholder="Status" class="border p-2 rounded">
+
+
+
+    <select id="status" class="border p-2 rounded">
+        <option>Applied</option>
+            <option>Interview</option>
+                <option>Offer</option>
+                    <option>Rejected</option>
+    </select>
+    <button onclick="addJob()" class="bg-blue-600 text-white rounded">Add Job</button>
+    
+</div>
+
+  <!-- Filters -->
+  <div class="flex gap-3 mb-4">
+    <button onclick="filterJobs('All')" class="px-3 py-1 bg-gray-200 rounded">All</button>
+    <button onclick="filterJobs('Applied')" class="px-3 py-1 bg-blue-200 rounded">Applied</button>
+    <button onclick="filterJobs('Interview')" class="px-3 py-1 bg-yellow-200 rounded">Interview</button>
+    <button onclick="filterJobs('Offer')" class="px-3 py-1 bg-green-200 rounded">Offer</button>
+    <button onclick="filterJobs('Rejected')" class="px-3 py-1 bg-red-200 rounded">Rejected</button>
+  </div>
+
+  <!-- Job List -->
+  <div id="jobList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+
+
+
+
+
+
+<script src="app.js"></script>
+</body>
+
+</html>
