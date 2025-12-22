@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Quiz App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#1e40af', success: '#10b981', danger: '#ef4444' } } }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-indigo-500 to-purple-600 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl p-8 max-w-md w-full mx-4 border border-white/50">
+        <div id="quiz" class="space-y-6">
+            <div class="text-center">
+                <h1 class="text-3xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent mb-2">Mini Quiz App Created By Abeer</h1>
+                <p class="text-gray-600">JavaScript Edition</p>
+            </div>
+            <div class="text-center">
+                <div id="question" class="text-2xl font-bold text-gray-800 mb-6 min-h-20 flex items-center justify-center">Click Start to Begin!</div>
+                <div id="options" class="space-y-3"></div>
+            </div>
+            <div class="flex gap-3">
+                
+                <button id="start" class="flex-1 bg-primary text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg hidden">Start Quiz</button>
+                <button id="next" class="flex-1 bg-primary text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg hidden">Next</button>
+                <button id="restart" class="flex-1 bg-success text-white py-3 rounded-xl font-bold hover:bg-emerald-600 transition-all shadow-lg hidden">Restart</button>
+            </div>
+        
+            <div id="score" class="hidden text-center p-4 bg-green-50 rounded-xl">
+                <div id="scoreText" class="text-3xl font-bold text-success mb-4"></div>
+                <p class="text-gray-600">Great Job!</p>
+            </div>
+            <div class="text-center text-sm text-gray-500 mt-4">
+                <p>10 Questions To Test Your Knowledge</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script>
+
+
+     const firebaseConfig = {
+    apiKey: "AIzaSyBqNh5JF-ZyebQXbpNMpQCvF8ApbCg5rNI",
+    authDomain: "quiz-app-7145a.firebaseapp.com",
+    projectId: "quiz-app-7145a",
+    storageBucket: "quiz-app-7145a.firebasestorage.app",
+    messagingSenderId: "595375951098",
+    appId: "1:595375951098:web:404a3af563562e9d97cd43",
+    measurementId: "G-CZ55QEXW3T"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="quiz.js"></script>
+</body>
+</html>
